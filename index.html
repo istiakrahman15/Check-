@@ -19,65 +19,70 @@
   <!-- ============================= -->
   <main id="constructionPage" class="page">
 
-    <!-- glowing sakura ornament, replaces the old ring -->
-    <div class="sakura-ornament" aria-hidden="true">
-      <svg viewBox="0 0 100 100" class="sakura-svg">
-        <g class="sakura-petals">
-          <ellipse cx="50" cy="28" rx="12" ry="18" class="petal p1"/>
-          <ellipse cx="50" cy="28" rx="12" ry="18" class="petal p2"/>
-          <ellipse cx="50" cy="28" rx="12" ry="18" class="petal p3"/>
-          <ellipse cx="50" cy="28" rx="12" ry="18" class="petal p4"/>
-          <ellipse cx="50" cy="28" rx="12" ry="18" class="petal p5"/>
-        </g>
-        <circle cx="50" cy="50" r="6" class="sakura-center"/>
-      </svg>
-      <div class="sakura-sparkle s1">✦</div>
-      <div class="sakura-sparkle s2">✦</div>
-      <div class="sakura-sparkle s3">✧</div>
+    <!-- character artwork framing the scene -->
+    <img src="assets/girl-left.png" alt="" class="girl girl-left" aria-hidden="true" />
+    <img src="assets/girl-right.png" alt="" class="girl girl-right" aria-hidden="true" />
+
+    <div class="hero-inner">
+
+      <!-- glowing sakura ornament -->
+      <div class="sakura-ornament" aria-hidden="true">
+        <svg viewBox="0 0 100 100" class="sakura-svg">
+          <g class="sakura-petals">
+            <ellipse cx="50" cy="28" rx="12" ry="18" class="petal p1"/>
+            <ellipse cx="50" cy="28" rx="12" ry="18" class="petal p2"/>
+            <ellipse cx="50" cy="28" rx="12" ry="18" class="petal p3"/>
+            <ellipse cx="50" cy="28" rx="12" ry="18" class="petal p4"/>
+            <ellipse cx="50" cy="28" rx="12" ry="18" class="petal p5"/>
+          </g>
+          <circle cx="50" cy="50" r="6" class="sakura-center"/>
+        </svg>
+        <div class="sakura-sparkle s1">✦</div>
+        <div class="sakura-sparkle s2">✦</div>
+        <div class="sakura-sparkle s3">✧</div>
+      </div>
+
+      <p class="eyebrow">🌸 A LITTLE SURPRISE IS BLOOMING</p>
+
+      <h1 class="hero-title">
+        Something Special<br />Is Blooming For You&hellip; 💗
+      </h1>
+
+      <p class="hero-subtitle">
+        A little surprise is taking shape.<br class="mobile-break" />
+        Come back when the time is right.
+      </p>
+      <p class="hero-whisper">Until then, let the petals keep the secret&hellip;</p>
+
+      <div class="countdown" id="countdown" role="timer" aria-live="polite">
+        <div class="count-block">
+          <span class="count-num" id="cd-days">00</span>
+          <span class="count-label">Days</span>
+        </div>
+        <div class="count-sep">♡</div>
+        <div class="count-block">
+          <span class="count-num" id="cd-hours">00</span>
+          <span class="count-label">Hours</span>
+        </div>
+        <div class="count-sep">♡</div>
+        <div class="count-block">
+          <span class="count-num" id="cd-mins">00</span>
+          <span class="count-label">Minutes</span>
+        </div>
+        <div class="count-sep">♡</div>
+        <div class="count-block">
+          <span class="count-num" id="cd-secs">00</span>
+          <span class="count-label">Seconds</span>
+        </div>
+      </div>
+
+      <p class="unlock-date">
+        🌸 The little surprise blooms on <span id="unlockDateText">July 30, 2027</span>
+      </p>
+
     </div>
 
-    <p class="eyebrow">🌸 A LITTLE SURPRISE IS BLOOMING</p>
-
-    <h1 class="hero-title">
-      Something Special<br />Is Blooming For You&hellip; 🌸
-    </h1>
-
-    <p class="hero-subtitle">
-      A little surprise is taking shape.<br class="mobile-break" />
-      Come back when the time is right.
-    </p>
-    <p class="hero-whisper">Until then, let the petals keep the secret&hellip; 🌸</p>
-
-    <div class="countdown" id="countdown" role="timer" aria-live="polite">
-      <div class="count-block">
-        <span class="count-num" id="cd-days">00</span>
-        <span class="count-label">Days</span>
-      </div>
-      <div class="count-sep">♡</div>
-      <div class="count-block">
-        <span class="count-num" id="cd-hours">00</span>
-        <span class="count-label">Hours</span>
-      </div>
-      <div class="count-sep">♡</div>
-      <div class="count-block">
-        <span class="count-num" id="cd-mins">00</span>
-        <span class="count-label">Minutes</span>
-      </div>
-      <div class="count-sep">♡</div>
-      <div class="count-block">
-        <span class="count-num" id="cd-secs">00</span>
-        <span class="count-label">Seconds</span>
-      </div>
-    </div>
-
-    <p class="unlock-date">
-      🌸 The little surprise blooms on <span id="unlockDateText">July 30, 2027</span>
-    </p>
-
-    <!-- Optional decorative slot: only shows if you add assets/anime-character.png -->
-    <div class="anime-decoration hidden" id="animeDecoration" aria-hidden="true">
-      <img src="assets/anime-character.png" alt="" id="animeDecorationImg" />
-    </div>
+    <p class="credit">Made with ❤️ by Istiak Rahman</p>
 
   </main>
 
@@ -86,21 +91,20 @@
   <!-- ============================= -->
   <main id="birthdayPage" class="page hidden">
 
-    <!-- floating music toggle -->
-    <button id="musicToggle" class="music-btn" aria-label="Play birthday music">
-      <span class="music-icon">&#9835;</span>
-    </button>
-    <audio id="birthdayMusic" src="assets/birthday-music.mp3" loop preload="none"></audio>
-
     <!-- HERO -->
     <section class="section hero-section">
-      <p class="eyebrow">🌸 TODAY IS ALL ABOUT YOU</p>
-      <h1 class="birthday-title">
-        Happy Birthday, <span id="birthdayName" class="name-highlight">Sweetheart</span> 🌸
-      </h1>
-      <p class="hero-subtitle">Today is your special day.</p>
-      <div class="scroll-cue" aria-hidden="true">
-        <span></span>
+      <img src="assets/girl-left.png" alt="" class="girl girl-left" aria-hidden="true" />
+      <img src="assets/girl-right.png" alt="" class="girl girl-right" aria-hidden="true" />
+
+      <div class="hero-inner">
+        <p class="eyebrow">🌸 TODAY IS ALL ABOUT YOU</p>
+        <h1 class="birthday-title">
+          Happy Birthday <span id="birthdayName" class="name-highlight">Mifuu</span> 💗
+        </h1>
+        <p class="hero-subtitle">Today is your special day 🌸</p>
+        <div class="scroll-cue" aria-hidden="true">
+          <span></span>
+        </div>
       </div>
     </section>
 
@@ -174,6 +178,7 @@
         May your smile always stay this beautiful, your dreams become reality,
         and every new year of your life bring you something even more wonderful.
       </p>
+      <p class="credit">Made with ❤️ by Istiak Rahman</p>
     </section>
 
   </main>

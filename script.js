@@ -3,7 +3,7 @@
    The only values you should need to touch are here.
    ===================================================== */
 const BIRTHDAY_DATE = "2027-07-30T00:00:00"; // change the surprise's unlock date/time
-const BIRTHDAY_NAME  = "Sweetheart";          // change to the person's name
+const BIRTHDAY_NAME  = "Mifuu";               // change to the person's name
 
 /* =====================================================
    ELEMENT REFERENCES
@@ -34,15 +34,6 @@ function applyCustomValues() {
     year: "numeric",
   });
   unlockDateText.textContent = formatted;
-
-  // Show the optional anime decoration only if assets/anime-character.png actually exists.
-  // Add your own (non-copyrighted) image there and it will appear automatically.
-  const decoWrap = document.getElementById("animeDecoration");
-  const decoImg = document.getElementById("animeDecorationImg");
-  if (decoWrap && decoImg) {
-    decoImg.addEventListener("load", () => decoWrap.classList.remove("hidden"));
-    decoImg.addEventListener("error", () => decoWrap.classList.add("hidden"));
-  }
 }
 
 /* =====================================================
@@ -165,29 +156,6 @@ surpriseBtn.addEventListener("click", () => {
 });
 
 /* =====================================================
-   MUSIC TOGGLE (requires a user click to satisfy autoplay policies)
-   ===================================================== */
-const musicToggle = document.getElementById("musicToggle");
-const birthdayMusic = document.getElementById("birthdayMusic");
-let isPlaying = false;
-
-musicToggle.addEventListener("click", () => {
-  if (isPlaying) {
-    birthdayMusic.pause();
-    musicToggle.classList.remove("playing");
-    musicToggle.setAttribute("aria-label", "Play birthday music");
-  } else {
-    birthdayMusic.play().catch(() => {
-      // Replace assets/birthday-music.mp3 with a real audio file for playback to work.
-      console.warn("Add a real audio file at assets/birthday-music.mp3 to enable playback.");
-    });
-    musicToggle.classList.add("playing");
-    musicToggle.setAttribute("aria-label", "Pause birthday music");
-  }
-  isPlaying = !isPlaying;
-});
-
-/* =====================================================
    AMBIENT BACKGROUND — sakura petals, hearts, and sparkles
    drifting softly behind both pages.
    ===================================================== */
@@ -207,7 +175,7 @@ musicToggle.addEventListener("click", () => {
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // keep the particle count light for mobile performance
-  const PARTICLE_COUNT = prefersReducedMotion ? 0 : (window.innerWidth < 640 ? 20 : 34);
+  const PARTICLE_COUNT = prefersReducedMotion ? 0 : (window.innerWidth < 640 ? 18 : 32);
   const kinds = ["petal", "heart", "sparkle", "petal", "sparkle"];
   const petalColors = ["#ffb3d1", "#f79cc0", "#ffc9df", "#d8c2f0"];
 
